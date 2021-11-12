@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>Memento Food Management! </h1>
+	
+	<h2>Beneficiarios</h2>
+	
+	<ul th:each="beneficiario : ${ beneficiarios }">
+		<li >
+			<p th:text="${ beneficiario.nome }"></p>
+			<p th:text="${ beneficiario.cartaoIdentificacao }"></p>
+		</li>
+	
+	</ul>
+	<a href="/foodwaste/beneficiario/new">Novo Beneficiario</a>
+</body>
+</html>

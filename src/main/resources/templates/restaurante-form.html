@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Food Waste</h1>
+	
+	<h2>Novo Restaurante</h2>
+	
+	<form action="/foodwaste/restaurante" method="post" th:object="${restaurante}">
+		<label for="nome">Nome</label><br>
+		<input id="nome" name="nome" th:field="*{nome}"><br>
+		<span th:errors="*{nome}"></span><br>
+		
+		<label for="cnpj">CNPJ</label><br>
+		<textarea id="cnpj" name="cnpj" th:field="*{cnpj}"></textarea><br>
+		<span th:errors="*{cnpj}"></span><br>
+		
+<!-- 		<label for="points">Pontos</label><br> -->
+<!-- 		<input type="range" name="points" id="points" min=10 max=500 th:field="*{points}"><br> -->
+<!-- 		<span th:errors="*{points}"></span><br> -->
+		
+		<a href="/foodwaste/restaurante">Cancelar</a>
+		<button>Salvar</button>
+	</form>
+</body>
+</html>

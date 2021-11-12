@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>Memento Food Management! </h1>
+	
+	<h2>Restaurantes</h2>
+	
+	<ul th:each="restaurante : ${ restaurantes }">
+		<li >
+			<p th:text="${ restaurante.nome }"></p>
+			<p th:text="${ restaurante.cnpj }"></p>
+			<button>Pegar</button>
+		</li>
+	
+	</ul>
+	<a href="/foodwaste/restaurante/new">Nova Tarefa</a>
+</body>
+</html>

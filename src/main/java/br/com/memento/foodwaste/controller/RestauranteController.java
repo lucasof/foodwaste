@@ -42,7 +42,6 @@ public class RestauranteController {
 		
 		repository.save(restaurante);
 
-		
-		return "restaurantes";
+		return "redirect:/restaurante";
 	}
 }

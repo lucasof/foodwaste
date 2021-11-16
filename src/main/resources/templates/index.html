@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+
+</head>
+<body>
+
+
+	<header>
+        <nav>
+            <div class="logo"></div>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="/foodwaste/restaurante">Ver restaurantes</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="sobre">
+
+            <div class="sobre">
+                <div class="texto">
+                   	<h1>Bem-vindo ao Memento!</h1>
+	
+					<h2>Faça refeições de lugares confiáveis e de graça!</h2>
+                </div>
+              
+            </div>
+
+
+        </section>
+
+        <section id="problema">
+
+            <div class="quadro">
+
+                <div class="texto">
+                    <h2>Problema</h2>
+
+                    <p>O problema que foi apresentado pela empresa foi o fato de ter uma alta rotatividade de
+                        funcionários, o que acarreta um aumento nos custos com recrutamento e seleção, além do
+                        gasto com treinamentos e o tempo de retorno que o novo funcionário demorará para
+                        aprender suas tarefas.
+                        Com isso em mente, foi proposto que pensássemos em alguma maneira de aumentar o <b>Employee
+                            Lifetime Value(ELTV)</b>.
+                    </p>
+                    <p> Na empresa em questão, foram dadas quatro opções onde poderíamos sugerir uma melhoria, são elas:
+                        Onboarding, Desenvolvimento, Gestão e Cultura.
+                        Ao aumentarmos a produtividade do funcionário em uma dessas áreas, conseguimos aumentar sua
+                        satisfação e, por consequência, seu ELTV.
+
+                    </p>
+                </div>
+
+                <div class="figuras">
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <section id="melhoria">
+
+
+            <div class="quadroMelhoria">
+                <div class="textoMelhoria">
+                    <h2>Melhoria</h2>
+
+                    <p>
+                        A proposta de melhoria oferecida pelo Web Incorporation,
+                        irá focar na parte de <b>Desenvolvimento</b> do funcionário.
+                    </p>
+                    <p>
+                        Com base nas informações providas pela própria empresa e
+                        pelas pesquisas realizadas por nós, foi observado uma
+                        falta de clareza entre gerência e subordinados no que se diz
+                        questão ao desenvolvimento dos funcionários.
+                    </p>
+                    <p>
+                        Sendo assim, será desenvolvida uma ferramenta que ajude a manter o processo
+                        de <u>feedback</u> organizado para que todas as partes saibam o que está
+                        acontecendo e como melhorar, dando assim mais perspectivas para os
+                        funcionários e controle da equipe ao gestor.
+                    </p>
+                </div>
+                <div class="figurasMelhoria">
+<!--                     <figure><img src="./Imagens/feedback.jpg" alt="" class="fotos"></figure> -->
+<!--                     <figure><img src="./Imagens/seta_baixo.png" alt="" class="seta"></figure> -->
+<!--                     <figure><img src="./Imagens/celular.jpg" alt="" class="fotos"></figure> -->
+<!--                     <figure><img src="./Imagens/seta_baixo.png" alt="" class="seta"></figure> -->
+<!--                     <figure><img src="./Imagens/motivacao.jpg" alt="" class="fotos"></figure> -->
+                </div>
+            </div>
+
+
+        </section>
+
+        
+
+        <section id="contato">
+
+
+            <div class="contato">
+                <div class="titulo">
+                    <h1>Contato</h1>
+                </div>
+                <div class="redes">
+                    <div class="textocontato">
+                        <p>Entre em contato conosco pelas nossas redes sociais ou deixe sua
+                            mensagem ao lado!</p>
+                        <p>Caso seja urgente, favor enviar um e-mail para: <b> webinc@gmail.com</b>. Responderemos o
+                            mais rápido possível </p>
+                    </div>
+                    <div class="links">
+                        <div class="link-redes">
+                            <a href="#">
+                                <i class="fab fa-instagram redes-sociais">
+                                    <p>@webinc</p>
+                                </i>
+                            </a>
+                        </div>
+
+                        <div class="link-redes">
+                            <a href="#">
+                                <i class="fab fa-facebook -p redes-sociais">
+                                    <p>Web_Incorporation</p>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="link-redes">
+                            <a href="#">
+                                <i class="fab fa-whatsapp -p redes-sociais">
+                                    <p>(11)99598-6942</p>
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="formulario">
+
+                    <form action="enviar" method="GET" id="formulario">
+                        <label for="uNome">Nome:</label><br>
+                        <input type="text" name="nome" id="nomeUsuario"><br>
+                        <label for="">E-mail:</label><br>
+                        <input type="email" name="email" id="email"><br>
+                        <label for="">Mensagem:</label><br>
+                        <textarea name="mensagem" id="msg" cols="30" rows="10"></textarea><br>
+                        <input type="submit" id="botao" value="Enviar">
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>
+            WEB Incorporation - Soluções Tecnológicas
+        </p>
+        <p>
+            Av. Lins de Vasconcelos, 1222 - Aclimação, São Paulo - SP, 01538-001
+
+        </p>
+    </footer>
+	
+</body>
+</html>

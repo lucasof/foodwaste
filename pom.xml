@@ -116,7 +116,7 @@
         <version>1.9.1</version>  
         <configuration>
           <schemaVersion>V2</schemaVersion>
-          <resourceGroup>foodwaste-rg</resourceGroup>
+          <resourceGroup>gr-foodwaste-memento</resourceGroup>
           <appName>foodwaste-memento</appName>
           <pricingTier>F1</pricingTier>
           <region>brazilsouth</region>

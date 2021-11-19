@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Restaurantes</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+
 </head>
 <body>
 
+
+	<header>
+        <nav>
+            <div class="logo"></div>
+            <ul>
+                <li><a href="/foodwaste/">Sobre</a></li>
+                <li><a href="/foodwaste/restaurante">Ver restaurantes</a></li>
+                <li><a href="">Entrar</a></li>
+                <li><a href="">Inscrever Pessoa</a></li>
+                
+            </ul>
+        </nav>
+    </header>
 	<h1>Memento Food Management! </h1>
 	
 	<h2>Restaurantes</h2>
 	
-	<ul th:each="restaurante : ${ restaurantes }">
-		<li >
+	<div th:each="restaurante : ${ restaurantes }">
+		<div>
+			<h4>Nome: </h4>
 			<p th:text="${ restaurante.nome }"></p>
-			<p th:text="${ restaurante.cnpj }"></p>
-			<button>Pegar</button>
-		</li>
+			
+<!-- 			<h4>Quantidade de refeições disponíveis</h4> -->
+<!-- 			<p th:text="${ restaurante.cnpj }"></p> -->
+			
+			<h4>Endereço:</h4>
+			<p th:text="${ restaurante.endereco }"></p>
+			
+			<h4>Quantidade de refeições disponíveis: </h4>
+			<p th:text="${ restaurante.refeicoesPorDia }"></p>
+		</div>
 	
-	</ul>
-	<a href="/foodwaste/restaurante/new">Nova Tarefa</a>
+	</div>
+	
+	<div>
+		<h3>Possui um restaurante e quer ajudar?</h3>
+		<h4>Cadastre-se aqui</h4>
+		<a href="/foodwaste/restaurante/new">Novo Restaurante</a>
+	</div>
+
 </body>
 </html>

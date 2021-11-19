@@ -1,0 +1,15 @@
+
+drop table t_mem_beneficiario cascade constraints
+drop table t_mem_refeicao cascade constraints
+drop table t_mem_restaurante cascade constraints
+drop sequence sq_beneficiario
+drop sequence sq_refeicao
+drop sequence sq_restaurante
+create sequence sq_beneficiario start with 1 increment by  1
+create sequence sq_refeicao start with 1 increment by  1
+create sequence sq_restaurante start with 1 increment by  1
+create table t_mem_beneficiario (cd_beneficiario number(10,0) not null, nr_cartao varchar2(120 char) not null, nm_beneficiario varchar2(120 char) not null, primary key (cd_beneficiario))
+create table t_mem_refeicao (cd_refeicao number(10,0) not null, dt_retirada timestamp, nr_refeicoes_disponiveis number(10,0), beneficiario_cd_beneficiario number(10,0), restaurante_cd_restaurante number(10,0), primary key (cd_refeicao))
+create table t_mem_restaurante (cd_restaurante number(10,0) not null, nr_cnpj varchar2(18 char) not null, ds_endereco varchar2(255 char) not null, nm_restaurante varchar2(120 char) not null, nr_refeicoes number(10,0) check (nr_refeicoes>=1), primary key (cd_restaurante))
+alter table t_mem_refeicao add constraint FKa8u4wlwd5qpd4mcjdeitey31s foreign key (beneficiario_cd_beneficiario) references t_mem_beneficiario
+alter table t_mem_refeicao add constraint FKeg2axh814yj0lc7lggpv5ye6b foreign key (restaurante_cd_restaurante) references t_mem_restaurante

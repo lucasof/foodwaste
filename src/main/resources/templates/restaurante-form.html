@@ -3,8 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+
 </head>
 <body>
+
+
+	<header>
+        <nav>
+            <div class="logo"></div>
+            <ul>
+                <li><a href="/foodwaste/">Sobre</a></li>
+                <li><a href="/foodwaste/restaurante">Ver restaurantes</a></li>
+                <li><a href="">Entrar</a></li>
+                <li><a href="">Inscrever Pessoa</a></li>
+                
+            </ul>
+        </nav>
+    </header>
 	<h1>Food Waste</h1>
 	
 	<h2>Novo Restaurante</h2>
@@ -15,13 +31,17 @@
 		<span th:errors="*{nome}"></span><br>
 		
 		<label for="cnpj">CNPJ</label><br>
-		<textarea id="cnpj" name="cnpj" th:field="*{cnpj}"></textarea><br>
+		<input id="cnpj" name="cnpj" th:field="*{cnpj}"><br>
 		<span th:errors="*{cnpj}"></span><br>
+			
+		<label for="endereco">Endereço</label><br>
+		<input id="endereco" name="endereco" th:field="*{endereco}"><br>
+		<span th:errors="*{endereco}"></span><br>
 		
-<!-- 		<label for="points">Pontos</label><br> -->
-<!-- 		<input type="range" name="points" id="points" min=10 max=500 th:field="*{points}"><br> -->
-<!-- 		<span th:errors="*{points}"></span><br> -->
-		
+		<label for="refeicoesPorDia">Quantidade de Refeições Por Dia</label><br>
+		<input id="refeicoesPorDia" name="refeicoesPorDia" th:field="*{refeicoesPorDia}"><br>
+		<span th:errors="*{refeicoesPorDia}"></span><br>
+				
 		<a href="/foodwaste/restaurante">Cancelar</a>
 		<button>Salvar</button>
 	</form>
